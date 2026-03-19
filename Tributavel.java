@@ -1,0 +1,4 @@
+ interface Tributavel {
+
+    double calcularatributo();
+}
