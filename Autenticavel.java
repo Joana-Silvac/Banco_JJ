@@ -1,2 +1,4 @@
-public class Autenticavel {
+interface Autenticavel {
+
+    boolean autenticar(String senha);
 }

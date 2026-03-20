@@ -1,6 +1,9 @@
 class CalculadoradeImposto {
-    public double CalculadoradeImposto(Tributavel r){
-        r.calcularatributo();
-        return 0;
+    private double total;
+    public void registro(Tributavel t){
+        total += t.calcularatributo();
+    }
+    public double gettotal(){
+        return total;
     }
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -5,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Banco banco = new Banco();
+        Gerente gerente= new Gerente("Eduardo Silva","senha_245");
 
         Scanner entrada= new Scanner(System.in);
         while(true){
@@ -16,8 +18,9 @@ public class Main {
                     "4 - Sacar\n" +
                     "5 - Transferir\n" +
                     "6 - Consultar saldo\n" +
-                    "7 - Sair\n" +
-                    "\n" +
+                    "7 - Calcular tributo de contas correntes\n"+
+                    "8 - Autenticar gerente"+"\n"+
+                    "9 - sair"+"\n"+
                     "Escolha uma opção:");
 
             int n= entrada.nextInt();
@@ -36,10 +39,11 @@ public class Main {
 
                 int opcao= entrada.nextInt();
 
-
                 Conta resposta= (opcao==1)? new Contacorrente(nome,saldo_de_inicio):new Contapoupanca(nome,saldo_de_inicio);
                 banco.adicionar_contas(resposta);
             }
+
+
             else if (n==2){
                 banco.exibir_lista();
             }
@@ -110,8 +114,33 @@ public class Main {
                 else {
                     System.out.println("Conta não encontrada");
                 }
+
             }
+
             else if(n==7){
+                CalculadoradeImposto calc = new CalculadoradeImposto();
+
+                for (Conta continha : banco.contas) {
+                    if (continha instanceof Tributavel) {
+                        calc.registro((Tributavel) continha);}
+                }
+
+                System.out.println("Total de tributos: " + calc.gettotal());
+            }
+
+            else if(n==8){
+                System.out.print("Digite a senha do gerente: ");
+                entrada.nextLine();
+                String senhafuncionario = entrada.nextLine();
+
+                if (gerente.autenticar(senhafuncionario)) {
+                    System.out.println("acesso liberado");
+                } else {
+                    System.out.println("acesso negado");
+                }
+            }
+
+            else if(n==9){
                 System.out.println("Até a próxima!");
                 break;
             }
