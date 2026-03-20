@@ -14,87 +14,10 @@ Funcionalidades implementadas
 4 - Sacar
 5 - Transferir
 6 - Consultar saldo
-7 - Sair
+7-Calcular atributo de contas existentes
+8-Autenticar gerente
+9-sair
 
-- BANCO JAVA -
-
-1 - Criar conta
-2 - Listar contas
-3 - Depositar
-4 - Sacar
-5 - Transferir
-6 - Consultar saldo
-7 - Sair
-
-Escolha uma opção:
-1
-Nome do Titular:
-Joana
-Saldo inicial?
-0
-Conta corrente(1) ou Conta de poupança?(2)
-2
-Conta criada com sucesso
-- BANCO JAVA -
-
-1 - Criar conta
-2 - Listar contas
-3 - Depositar
-4 - Sacar
-5 - Transferir
-6 - Consultar saldo
-7 - Sair
-
-Escolha uma opção:
-1
-Nome do Titular:
-Debora
-Saldo inicial?
-22
-Conta corrente(1) ou Conta de poupança?(2)
-1
-Conta criada com sucesso
-- BANCO JAVA -
-
-1 - Criar conta
-2 - Listar contas
-3 - Depositar
-4 - Sacar
-5 - Transferir
-6 - Consultar saldo
-7 - Sair
-
-Escolha uma opção:
-2
-Titular: Joana
-Titular: Debora
-- BANCO JAVA -
-
-1 - Criar conta
-2 - Listar contas
-3 - Depositar
-4 - Sacar
-5 - Transferir
-6 - Consultar saldo
-7 - Sair
-
-Escolha uma opção:
-6
-Em qual das contas abaixo o senhor/a deseja fazer a transferência?(Digite o nome do titular)
-Titular: Joana
-Titular: Debora
-Debora
-Saldo: R$ 22.0
-- BANCO JAVA -
-
-1 - Criar conta
-2 - Listar contas
-3 - Depositar
-4 - Sacar
-5 - Transferir
-6 - Consultar saldo
-7 - Sair
-
-Escolha uma opção:
-7
-Até a próxima!
+A classe Conta é abstrata pq existe 2 tipos de contas,então Conta precisa ser abstrata para ser usada como base para corrente e poupança( e a classe Conta é generico para poder ser extendida ).
+Tributável é interface pq a conta corrente vai extender e implementar ela, ela é a base para especializações.
+Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
