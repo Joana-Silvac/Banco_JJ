@@ -18,7 +18,7 @@ public class Main {
                     "4 - Sacar\n" +
                     "5 - Transferir\n" +
                     "6 - Consultar saldo\n" +
-                    "7 - Calcular tributo de contas correntes\n"+
+                    "7 - Calcular atributo de contas correntes\n"+
                     "8 - Autenticar gerente"+"\n"+
                     "9 - sair"+"\n"+
                     "Escolha uma opção:");
