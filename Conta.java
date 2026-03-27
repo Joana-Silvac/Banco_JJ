@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 public abstract class Conta {
@@ -18,7 +20,13 @@ public abstract class Conta {
 
     }
 
-    public void setdepositar(double valor) {
+    @Override
+    public String toString(){
+        return "Titular: " + titular + "\nsaldo: " + saldo;
+    }
+
+
+public void setdepositar(double valor) {
         saldo += valor;
     }
     public void settransferencia(double valor) {

@@ -19,9 +19,14 @@ public class Banco {
             return null;
 
     }
-    public void exibir_lista(){
+
+    public String exibir_lista() {
+        StringBuilder lista = new StringBuilder();
+
         for(Conta c:contas){
-           c.exibirDados();
+            lista.append(c.toString()).append("\n\n");
         }
+
+        return lista.toString();
     }
 }
