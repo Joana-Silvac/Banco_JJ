@@ -25,7 +25,7 @@ Funcionalidades implementadas
 
 -Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
 
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 Na imagem acima temos um print da interface gráfica implementada.
 
