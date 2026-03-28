@@ -29,4 +29,4 @@ Funcionalidades implementadas
 
 Na imagem acima temos um print da interface gráfica implementada.
 
-Meu ''extra'' anti-IA foi uma taxa de 12.5 na conta corrente e a opção q permite excluir uma conta
+Meu diferencial anti-IA foi uma taxa de 12.5 na conta corrente e a opção q permite excluir uma conta
