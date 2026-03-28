@@ -16,7 +16,8 @@ Funcionalidades implementadas
 6 - Consultar saldo
 7-Calcular atributo de contas existentes
 8-Autenticar gerente
-9-sair
+9-excluir conta
+10-sair
 
 -A classe Conta é abstrata pq existe 2 tipos de contas,então Conta precisa ser abstrata para ser usada como base para corrente e poupança( e a classe Conta é generico para poder ser extendida ).
 
@@ -24,8 +25,7 @@ Funcionalidades implementadas
 
 -Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
 
-![img.png](img.png)
 
 Na imagem acima temos um print da interface gráfica implementada.
 
-Meu ''extra'' anti-IA foi uma taxa de 12.5 na conta corrente
+Meu diferencial anti-IA foi uma taxa de 12.5 na conta corrente e a opção q permite excluir uma conta
