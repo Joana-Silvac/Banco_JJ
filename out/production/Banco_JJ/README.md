@@ -23,3 +23,5 @@ A classe Conta é abstrata pq existe 2 tipos de contas,então Conta precisa ser 
 Tributável é interface pq a conta corrente vai extender e implementar ela, ela é a base para especializações.
 
 Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
+
+![img.png](img.png)

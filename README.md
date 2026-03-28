@@ -18,8 +18,12 @@ Funcionalidades implementadas
 8-Autenticar gerente
 9-sair
 
-A classe Conta é abstrata pq existe 2 tipos de contas,então Conta precisa ser abstrata para ser usada como base para corrente e poupança( e a classe Conta é generico para poder ser extendida ).
+-A classe Conta é abstrata pq existe 2 tipos de contas,então Conta precisa ser abstrata para ser usada como base para corrente e poupança( e a classe Conta é generico para poder ser extendida ).
 
-Tributável é interface pq a conta corrente vai extender e implementar ela, ela é a base para especializações.
+-Tributável é interface pq a conta corrente vai extender e implementar ela, ela é a base para especializações.
 
-Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
+-Aqui->'total += t.calcularatributo();' pq t pode ser conta corrente ou qualquer outra coisa que implemente Tributavel.
+
+![img.png](img.png)
+
+Na imagem acima temos um print da interface gráfica implementada.
