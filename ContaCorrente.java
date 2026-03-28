@@ -1,6 +1,6 @@
 class Contacorrente extends Conta implements Tributavel{
 
-    private double taxa = 20.0;
+    private double taxa = 12.5;
 
     public Contacorrente(String titular, double saldoInicial) {
 

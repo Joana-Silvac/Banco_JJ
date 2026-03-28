@@ -12,6 +12,7 @@ public class Front {
         JFrame janela_tranferencia= new JFrame();
         JFrame janela_saldo= new JFrame();
         JFrame janela_autenticar=new JFrame();
+        JFrame janela_excluir=new JFrame();
 
 
 
@@ -163,12 +164,14 @@ public class Front {
 
                 if(banco.contas.isEmpty()){
 
-                    JOptionPane.showMessageDialog(null, "Nenhuma conta existente");
-                    janela_deposito.setVisible(false);
-                    janela_principal.setVisible(true);
+
+                JOptionPane.showMessageDialog(null, "Nenhuma conta existente");
+                janela_deposito.setVisible(false);
+                janela_principal.setVisible(true);
 
 
-                }
+            }
+
 
                 int y=30;
 
@@ -566,9 +569,72 @@ public class Front {
             }
         });
 
-        JButton sair = new JButton("9- Sair");
+        JButton excluir = new JButton("9- Excluir conta");
+        excluir.setFocusPainted(false);
+        excluir.setBounds(370, 262, 265, 45);
+        janela_principal.add(excluir);
+
+
+        excluir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                janela_principal.setVisible(false);
+
+                janela_excluir.setBounds(400, 100, 730, 460);
+                janela_excluir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                janela_excluir.setLayout(null);
+                janela_excluir.setVisible(true);
+
+                if(banco.contas.isEmpty()){
+
+
+                    JOptionPane.showMessageDialog(null, "Nenhuma conta existente");
+                    janela_deposito.setVisible(false);
+                    janela_principal.setVisible(true);
+                }
+
+                int y=30;
+
+                for (Conta c: banco.contas) {
+                    JButton botao = new JButton(c.titular + " saldo: " + c.saldo);
+                    botao.setBounds(50, y, 250, 45);
+                    janela_excluir.add(botao);
+                    y = y + 50;
+                    Conta contausada = c;
+
+                    botao.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+
+                            boolean removido = banco.excluir_conta(contausada);
+
+                            if(removido){
+                                JOptionPane.showMessageDialog(null,"Conta removida");
+                                janela_excluir.setVisible(false);
+                                janela_principal.setVisible(true);
+
+                            }
+                            else{
+                                JOptionPane.showMessageDialog(null,"Houve algum erro");
+                                janela_excluir.setVisible(false);
+                                janela_principal.setVisible(true);
+                            }
+
+
+                        }
+                    });
+
+
+                }
+
+            }
+        });
+
+
+        JButton sair = new JButton("10- Sair");
         sair.setFocusPainted(false);
-        sair.setBounds(370, 262, 265, 45);
+        sair.setBounds(370, 310, 265, 45);
         janela_principal.add(sair);
 
         sair.addActionListener(new ActionListener() {
@@ -576,6 +642,8 @@ public class Front {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);            }
         });
+
+
 
 
     }

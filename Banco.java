@@ -29,4 +29,8 @@ public class Banco {
 
         return lista.toString();
     }
+
+    public boolean excluir_conta(Conta conta) {
+        return contas.remove(conta);
+    }
 }
