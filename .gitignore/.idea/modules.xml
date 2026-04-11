@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Banco_JJ.iml" filepath="$PROJECT_DIR$/Banco_JJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.gitignore/s.gitignore.iml" filepath="$PROJECT_DIR$/.gitignore/s.gitignore.iml" />
     </modules>
   </component>
 </project>
